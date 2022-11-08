@@ -1,0 +1,48 @@
+{
+  "title": "My First Adventure (POGCHAMP)",
+  "description": "Id eiusmod tempor irure ea eiusmod consequat aliquip ad do aute. Consequat id voluptate adipisicing eiusmod incididunt excepteur do aliquip. Aliqua officia minim sunt aute nostrud fugiat amet est aliqua. Irure ullamco tempor nulla aliqua excepteur et laboris exercitation laboris veniam. Laborum labore irure incididunt ut ipsum qui sunt.",
+  "author": "John Doe",
+  "date": "2019-01-01",
+  "tags": ["tag1", "tag2", "tag3"],
+  "version": "0.1.0",
+  "content": [
+    {
+      "label": "BEGINNING",
+      "type": "text",
+      "content": "Welcome to the adventure."
+    },
+    {
+      "type": "text",
+      "content": "I'm going to give you a random number.",
+      "script": ["number = ${random}", "number *= 100"]
+    },
+    {
+      "type": "text",
+      "content": "The number is ${number}."
+    },
+    {
+      "label": "QUESTION",
+      "type": "choice",
+      "content": "Do you like it?",
+      "script": ["likedResponse = ${__response}"]
+    },
+    {
+      "type": "goto",
+      "condition": "${likedResponse} == yes",
+      "content": "END"
+    },
+    {
+      "type": "text",
+      "content": "Try again :)"
+    },
+    {
+      "type": "goto",
+      "content": "QUESTION"
+    },
+    {
+      "label": "END",
+      "type": "text",
+      "content": "Thanks for playing!"
+    }
+  ]
+}
